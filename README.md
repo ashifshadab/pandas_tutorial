@@ -66,6 +66,286 @@ The DataFrame.from dict() method in Pandas builds DataFrame from a dictionary of
 # json_normalize() 
 Pandas have a nice inbuilt function called json_normalize() to flatten the simple to moderately semi-structured nested JSON structures to flat tables.
 
-# 
-<table class="series-table"><tbody><tr><th style="background-color:#c6ebd9">Function</th><th style="background-color:#c6ebd9">Description</th></tr><tr><td><strong><a href="https://www.geeksforgeeks.org/python-pandas-series-add/" rel="noopener" target="_blank">add()</a></strong></td><td>Method is used to add series or list like objects with same length to the caller series</td></tr><tr><td><strong><a href="https://www.geeksforgeeks.org/python-pandas-series-sub/" rel="noopener" target="_blank">sub()</a></strong></td><td>Method is used to subtract series or list like objects with same length from the caller series</td></tr><tr><td><strong><a href="https://www.geeksforgeeks.org/python-pandas-series-mul/" rel="noopener" target="_blank">mul()</a></strong></td><td>Method is used to multiply series or list like objects with same length with the caller series</td></tr><tr><td><strong><a href="https://www.geeksforgeeks.org/python-pandas-series-div/" rel="noopener" target="_blank">div()</a></strong></td><td>Method is used to divide series or list like objects with same length by the caller series</td></tr><tr><td><strong><a href="https://www.geeksforgeeks.org/python-pandas-series-sum/" rel="noopener" target="_blank">sum()</a></strong></td><td>Returns the sum of the values for the requested axis</td></tr><tr><td><strong><a href="https://www.geeksforgeeks.org/python-pandas-series-prod/" rel="noopener" target="_blank">prod()</a></strong></td><td>Returns the product of the values for the requested axis</td></tr><tr><td><strong>mean()</strong></td><td>Returns the mean of the values for the requested axis</td></tr><tr><td><strong><a href="https://www.geeksforgeeks.org/python-pandas-series-pow/" rel="noopener" target="_blank">pow()</a></strong></td><td>Method is used to put each element of passed series as exponential power of caller series and returned the results</td></tr><tr><td><strong><a href="https://www.geeksforgeeks.org/python-pandas-series-abs/" rel="noopener" target="_blank">abs()</a></strong></td><td>Method is used to get the absolute numeric value of each element in Series/DataFrame</td></tr><tr><td><strong><a href="https://www.geeksforgeeks.org/python-pandas-series-cov-to-find-covariance/" rel="noopener" target="_blank">cov()</a></strong></td><td>Method is used to find covariance of two series</td></tr></tbody></table>
+# Pandas Series
+Pandas Series is a one-dimensional labeled array capable of holding data of any type (integer, string, float, python objects, etc.).
+
+Pandas Series is nothing but a column in an excel sheet.
+Labels need not be unique but must be a hashable type. The object supports both integer and label-based indexing and provides a host of methods for performing operations involving the index.
+
+![](/assets/dataSER-1.png)
+
+# Accessing element of Series
+There are two ways through which we can access element of series, they are :
+<ol>
+    <li>Accessing Element from Series with Position</li>
+    <li>Accessing Element Using Label (index)</li>
+</ol>
+
+# Pandas series method:
+<table>
+  <tbody>
+    <tr>
+      <th>Function</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td>
+        <strong>Series()</strong>
+      </td>
+      <td>A pandas Series can be created with the Series() constructor method. This constructor method accepts a variety of inputs</td>
+    </tr>
+    <tr>
+      <td>
+        <strong>combine_first()</strong>
+      </td>
+      <td>Method is used to combine two series into one</td>
+    </tr>
+    <tr>
+      <td>
+        <strong>count()</strong>
+      </td>
+      <td>Returns number of non-NA/null observations in the Series</td>
+    </tr>
+    <tr>
+      <td>
+        <strong>size()</strong>
+      </td>
+      <td>Returns the number of elements in the underlying data</td>
+    </tr>
+    <tr>
+      <td>
+        <strong>name()</strong>
+      </td>
+      <td>Method allows to give a name to a Series object, i.e. to the column</td>
+    </tr>
+    <tr>
+      <td>
+        <strong>is_unique()</strong>
+      </td>
+      <td>Method returns boolean if values in the object are unique</td>
+    </tr>
+    <tr>
+      <td>
+        <strong>idxmax()</strong>
+      </td>
+      <td>Method to extract the index positions of the highest values in a Series</td>
+    </tr>
+    <tr>
+      <td>
+        <strong>idxmin()</strong>
+      </td>
+      <td>Method to extract the index positions of the lowest values in a Series</td>
+    </tr>
+    <tr>
+      <td>
+        <strong>sort_values()</strong>
+      </td>
+      <td>Method is called on a Series to sort the values in ascending or descending order</td>
+    </tr>
+    <tr>
+      <td>
+        <strong>sort_index()</strong>
+      </td>
+      <td>Method is called on a pandas Series to sort it by the index instead of its values</td>
+    </tr>
+    <tr>
+      <td>
+        <strong>head()</strong>
+      </td>
+      <td>Method is used to return a specified number of rows from the beginning of a Series. The method returns a brand new Series</td>
+    </tr>
+    <tr>
+      <td>
+        <strong>tail()</strong>
+      </td>
+      <td>Method is used to return a specified number of rows from the end of a Series. The method returns a brand new Series</td>
+    </tr>
+    <tr>
+      <td>
+        <strong>le()</strong>
+      </td>
+      <td>Used to compare every element of Caller series with passed series.It returns True for every element which is Less than or Equal to the element in passed series</td>
+    </tr>
+    <tr>
+      <td>
+        <strong>ne()</strong>
+      </td>
+      <td>Used to compare every element of Caller series with passed series. It returns True for every element which is Not Equal to the element in passed series</td>
+    </tr>
+    <tr>
+      <td>
+        <strong>ge()</strong>
+      </td>
+      <td>Used to compare every element of Caller series with passed series. It returns True for every element which is Greater than or Equal to the element in passed series</td>
+    </tr>
+    <tr>
+      <td>
+        <strong>
+          eq()
+        </strong>
+      </td>
+      <td>Used to compare every element of Caller series with passed series. It returns True for every element which is Equal to the element in passed series</td>
+    </tr>
+    <tr>
+      <td>
+        <strong>
+          gt()
+        </strong>
+      </td>
+      <td>Used to compare two series and return Boolean value for every respective element</td>
+    </tr>
+    <tr>
+      <td>
+        <strong>
+          lt()
+        </strong>
+      </td>
+      <td>Used to compare two series and return Boolean value for every respective element</td>
+    </tr>
+    <tr>
+      <td>
+        <strong>
+          clip()
+        </strong>
+      </td>
+      <td>Used to clip value below and above to passed Least and Max value</td>
+    </tr>
+    <tr>
+      <td>
+        <strong>
+          clip_lower()
+        </strong>
+      </td>
+      <td>Used to clip values below a passed least value</td>
+    </tr>
+    <tr>
+      <td>
+        <strong>
+          clip_upper()
+        </strong>
+      </td>
+      <td>Used to clip values above a passed maximum value</td>
+    </tr>
+    <tr>
+      <td>
+        <strong>
+          astype()
+        </strong>
+      </td>
+      <td>Method is used to change data type of a series</td>
+    </tr>
+    <tr>
+      <td>
+        <strong>
+          tolist()
+        </strong>
+      </td>
+      <td>Method is used to convert a series to list</td>
+    </tr>
+    <tr>
+      <td>
+        <strong>get()</strong>
+      </td>
+      <td>Method is called on a Series to extract values from a Series. This is alternative syntax to the traditional bracket syntax</td>
+    </tr>
+    <tr>
+      <td>
+        <strong>
+          unique()
+        </strong>
+      </td>
+      <td>Pandas unique() is used to see the unique values in a particular column</td>
+    </tr>
+    <tr>
+      <td>
+        <strong>
+          nunique()
+        </strong>
+      </td>
+      <td>Pandas nunique() is used to get a count of unique values</td>
+    </tr>
+    <tr>
+      <td>
+        <strong>value_counts()</strong>
+      </td>
+      <td>Method to count the number of the times each unique value occurs in a Series</td>
+    </tr>
+    <tr>
+      <td>
+        <strong>
+          factorize()
+        </strong>
+      </td>
+      <td>Method helps to get the numeric representation of an array by identifying distinct values</td>
+    </tr>
+    <tr>
+      <td>
+        <strong>map()</strong>
+      </td>
+      <td>Method to tie together the values from one object to another</td>
+    </tr>
+    <tr>
+      <td>
+        <strong>between()</strong>
+      </td>
+      <td>Pandas between() method is used on series to check which values lie between first and second argument</td>
+    </tr>
+    <tr>
+      <td>
+        <strong>apply()</strong>
+      </td>
+      <td>Method is called and feeded a Python function as an argument to use the function on every Series value. This method is helpful for executing custom operations that are not included in pandas or numpy</td>
+    </tr>
+  </tbody>
+</table>
+
+# Binary operation methods on series:
+<table>
+    <tbody>
+        <tr>
+            <th>Function</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td><strong>add()</strong></td>
+            <td>Method is used to add series or list like objects with same length to the caller series</td>
+        </tr>
+        <tr>
+            <td><strong>sub()</strong></td>
+            <td>Method is used to subtract series or list like objects with same length from the caller series</td>
+        </tr>
+        <tr>
+            <td><strong>mul()</strong></td>
+            <td>Method is used to multiply series or list like objects with same length with the caller series</td>
+        </tr>
+        <tr>
+            <td><strong>div()</strong></td>
+            <td>Method is used to divide series or list like objects with same length by the caller series</td>
+        </tr>
+        <tr>
+            <td><strong>sum()</strong></td>
+            <td>Returns the sum of the values for the requested axis</td>
+        </tr>
+        <tr>
+            <td><strong>prod()</strong></td>
+            <td>Returns the product of the values for the requested axis</td>
+        </tr>
+        <tr>
+            <td><strong>mean()</strong></td>
+            <td>Returns the mean of the values for the requested axis</td>
+        </tr>
+        <tr>
+            <td><strong>pow()</strong></td>
+            <td>Method is used to put each element of passed series as exponential power of caller series and returned the results</td>
+        </tr>
+        <tr>
+            <td><strong>abs()</strong></td>
+            <td>Method is used to get the absolute numeric value of each element in Series/DataFrame</td>
+        </tr>
+        <tr>
+            <td><strong>cov()</strong></td>
+            <td>Method is used to find covariance of two series</td>
+        </tr>
+    </tbody>
+</table>
 
